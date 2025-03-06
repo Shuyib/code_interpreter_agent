@@ -1,0 +1,32 @@
+FROM ollama/ollama:latest
+
+LABEL maintainer="Shuyib" \
+    description="Ollama API server with Qwen model" \
+    version="0.1"
+
+# Install curl for healthcheck
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
+# Setup system user
+RUN adduser --system --group ollama
+
+WORKDIR /app
+
+ENV OLLAMA_HOST=0.0.0.0:11434 \
+    OLLAMA_MODELS=/models \
+    OLLAMA_DEBUG=false \
+    OLLAMA_KEEP_ALIVE=-1 \
+    MODEL=qwen2.5-coder:0.5b
+
+RUN mkdir -p /models && \
+    chown -R ollama:ollama /models
+
+# Don't pre-pull the model in the Dockerfile - let it happen at runtime
+# This prevents the "running server twice" issue
+
+EXPOSE 11434
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=5 \
+    CMD curl -f http://localhost:11434/api/version || exit 1
+
+ENTRYPOINT ["ollama", "serve"]
