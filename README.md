@@ -114,22 +114,6 @@ To run specific test files:
 ```bash
 # Run a specific test file
 pytest testing/test_specific_file.py
-
-# Run tests with a specific name pattern
-pytest testing/ -k "test_pattern"
-```
-
-### Test Output Options
-
-```bash
-# Run with detailed output
-pytest test_cases/ -v
-
-# Generate test coverage report
-pytest test_cases/ --cov=. --cov-report=term
-
-# Output test results in JUnit format (useful for CI systems)
-pytest test_cases/ --junitxml=test-results.xml
 ```
 
 ### Troubleshooting Tests
