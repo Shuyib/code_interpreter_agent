@@ -1,7 +1,49 @@
 # Code Review Assistant Agent
 We will demonstrate how to use the code review assistant. We will use open-interpreter which is an open-source project that allows an Large Language Model (LLM) to execute code in a Python environment. When we write code we don't want to have sources of failure. We want to have a code that is easy to read, easy to understand and easy to maintain. We will use the code review agent to help us achieve that.
 
-First, we will need to install open-interpreter and edit the system prompt to make a code review assistant. We will then use the code review assistant to review the code we write.
+First, we will need to install open-interpreter and edit the system prompt to make a code review assistant. We will then use the code review assistant to review the code we write.    
+
+## File structure
+.       
+├── Makefile - Has shortcut commands to run common tasks         
+├── README.md - This file       
+├── code_review_assitant.py - The code review assistant script using open-interpreter & ollama      
+├── code_reviews - The folder where the code reviews are saved      
+│   ├── code_review_20250221_081632.md - sample code review     
+│   ├── code_review_20250221_082037.md - sample code review     
+│   ├── code_review_20250221_082226.md - sample code       review       
+│   ├── code_review_20250225_081526.md - sample code review             
+│   ├── code_review_20250225_081645.md - sample code review         
+│   ├── code_review_20250225_102036.md - sample code review         
+│   ├── code_review_20250225_120713.md - sample code review     
+│   ├── code_review_20250225_121022.md - sample code review     
+│   ├── code_review_20250225_124310.md - sample code review
+│   ├── code_review_20250226_070138.md - sample code review     
+│   ├── code_review_20250226_070240.md - sample code review     
+│   ├── code_review_20250226_072108.md - sample code review     
+│   ├── code_review_20250226_075022.md - sample code review     
+│   ├── code_review_20250303_114451.md - sample code review     
+│   ├── code_review_20250303_114642.md - sample code review     
+│   ├── code_review_20250303_114759.md - sample code review
+│   ├── code_review_20250303_115355.md - sample code review       
+│   ├── code_review_20250303_115559.md - sample code review     
+│   ├── code_review_20250304_142055.md - sample code review     
+│   └── code_review_20250305_073205.md - sample code review     
+├── docker - The folder that contains the docker files      
+│   ├── Dockerfile.oi - The docker file for open-interpreter        
+│   ├── Dockerfile.ollama - The docker file for ollama      
+│   ├── README.md - The readme for the docker files             
+│   ├── code_review_assitant.py - The code review assistant script using open-interpreter & ollama      
+│   ├── docker-compose.yml - The docker compose file for open-interpreter & ollama      
+│   └── requirements.txt - The requirements file for the docker files       
+├── requirements.txt - The requirements file for the code review assistant script       
+├── summary.dot - The dot file for the summary diagram for graphviz     
+├── summary.png - The png file for the summary diagram for graphviz         
+└── testing - The folder that contains the test files       
+    ├── __init__.py - The init file for the testing folder to allow it to be imported as a module       
+    ├── general_review_test.py - has examples for general software engineering practices        
+    ├── ml_review_test.py - has examples for machine learning practices     
+    └── test_input_validation.py - has examples for input validation        
 
 ## Installation
 Make a virtual environment and install open-interpreter.
