@@ -41,51 +41,10 @@ The code review assistant is designed to only review actual programming code. It
 
 Here's a diagram of how the code review assistant works.
 
-```mermaid
-digraph CodeReviewAssistant {
-    rankdir=LR;
-    node [shape=box, style=filled, color=lightblue];
 
-    subgraph cluster_0 {
-        label = "Code Review Assistant";
-        style=filled;
-        color=lightgrey;
-        
-        "User" -> "Clipboard" [label="Copy Code"];
-        "Clipboard" -> "query_clipboard_code()" [label="Paste Code"];
-        "query_clipboard_code()" -> "interpreter.chat()" [label="Send Prompt"];
-        "interpreter.chat()" -> "Assistant Response" [label="Receive Response"];
-        "Assistant Response" -> "format_assistant_response()" [label="Format Response"];
-        "format_assistant_response()" -> "save_code_review()" [label="Save Review"];
-        "save_code_review()" -> "Markdown File" [label="Write to File"];
-    }
+![Here is a diagram of how the code review assistant works.](summary.png)
 
-    subgraph cluster_1 {
-        label = "Dependencies";
-        style=filled;
-        color=lightgrey;
-        
-        "check_and_install_dependencies()" -> "requests";
-        "check_and_install_dependencies()" -> "pyperclip";
-        "check_and_install_dependencies()" -> "open-interpreter";
-        "check_ollama_installation()" -> "Ollama";
-    }
 
-    subgraph cluster_2 {
-        label = "Code Review Process";
-        style=filled;
-        color=lightgrey;
-        
-        "Original Code" -> "Assistant's Review";
-        "Assistant's Review" -> "Improved Code";
-    }
-
-    "User" -> "check_and_install_dependencies()" [label="Run Script"];
-    "User" -> "check_ollama_installation()" [label="Run Script"];
-    "User" -> "query_clipboard_code()" [label="Run Script"];
-    "Markdown File" -> "User" [label="Review Saved"];
-}
-```
 Make the graph with the following command
 ```bash
 python3 -m pip install graphviz
@@ -95,8 +54,6 @@ Edit the .dot file to your liking and run the following command
 ```bash
 dot -Tpng summary.dot -o summary.png
 ```
-
-![Here is a diagram of how the code review assistant works.](summary.png)
 
 ## Running Tests
 
