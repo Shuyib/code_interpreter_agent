@@ -11,24 +11,8 @@ First, we will need to install open-interpreter and edit the system prompt to ma
 ├── code_reviews - The folder where the code reviews are saved      
 │   ├── code_review_20250221_081632.md - sample code review     
 │   ├── code_review_20250221_082037.md - sample code review     
-│   ├── code_review_20250221_082226.md - sample code       review       
-│   ├── code_review_20250225_081526.md - sample code review             
-│   ├── code_review_20250225_081645.md - sample code review         
-│   ├── code_review_20250225_102036.md - sample code review         
-│   ├── code_review_20250225_120713.md - sample code review     
-│   ├── code_review_20250225_121022.md - sample code review     
-│   ├── code_review_20250225_124310.md - sample code review
-│   ├── code_review_20250226_070138.md - sample code review     
-│   ├── code_review_20250226_070240.md - sample code review     
-│   ├── code_review_20250226_072108.md - sample code review     
-│   ├── code_review_20250226_075022.md - sample code review     
-│   ├── code_review_20250303_114451.md - sample code review     
-│   ├── code_review_20250303_114642.md - sample code review     
-│   ├── code_review_20250303_114759.md - sample code review
-│   ├── code_review_20250303_115355.md - sample code review       
-│   ├── code_review_20250303_115559.md - sample code review     
-│   ├── code_review_20250304_142055.md - sample code review     
-│   └── code_review_20250305_073205.md - sample code review     
+│   ├── code_review_20250221_082226.md - sample code review       
+│   ├── code_review_20250225_081526.md - sample code review               
 ├── docker - The folder that contains the docker files      
 │   ├── Dockerfile.oi - The docker file for open-interpreter        
 │   ├── Dockerfile.ollama - The docker file for ollama      
