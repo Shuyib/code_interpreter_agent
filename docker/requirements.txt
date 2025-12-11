@@ -1,4 +1,4 @@
-requests==2.32.3
+requests==2.32.4
 open-interpreter==0.4.3
 # pyperclip is optional - only needed if clipboard support is desired
 pyperclip==1.9.0
