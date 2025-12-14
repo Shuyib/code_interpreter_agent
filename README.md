@@ -135,7 +135,21 @@ This project is inspired by the need for better code review tools and the capabi
 
 - The [open-interpreter](https://github.com/KillianLucas/open-interpreter) team for their work on this project
 - [Ollama](https://ollama.com/) - a great tool for running LLMs locally
-- [Qwen 2.5 coder](https://github.com/QwenLM/Qwen2.5-Coder) by the Alibaba team - helps run the code review assistant locally in resource constrained environments
+- @misc{qwen3technicalreport,
+      title={Qwen3 Technical Report}, 
+      author={Qwen Team},
+      year={2025},
+      eprint={2505.09388},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2505.09388},
+}
+@article{hui2024qwen2,
+  title={Qwen2. 5-Coder Technical Report},
+  author={Hui, Binyuan and Yang, Jian and Cui, Zeyu and Yang, Jiaxi and Liu, Dayiheng and Zhang, Lei and Liu, Tianyu and Zhang, Jiajun and Yu, Bowen and Dang, Kai and others},
+  journal={arXiv preprint arXiv:2409.12186},
+  year={2024}
+}
 - [pyperclip](https://github.com/asweigart/pyperclip) - for clipboard functionality
 
 
