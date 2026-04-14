@@ -4,7 +4,7 @@ open-interpreter==0.4.3
 pyperclip==1.9.0
 black==25.1.0
 pylint==3.3.4
-pytest==8.3.4
+pytest==9.0.3
 pyment
 pandas==2.2.3
 numpy==2.2.3
